@@ -1,0 +1,32 @@
+[
+    {
+        "title": "MyImmo",
+        "subtitle": "Application immobilière",
+        "img": "/img/myimmo.png"
+    },
+    {
+        "title": "La caisse d'épargne",
+        "subtitle": "Jeux de nöel",
+        "img": "/img/izicarte.png"
+    },
+    {
+        "title": "Projet Twitter",
+        "subtitle": "Blog style Twitter",
+        "img": "/img/twitter.png"
+    },
+    {
+        "title": "Landing GMF",
+        "subtitle": "Landing simple pour GMF",
+        "img": "/img/gmf.png"
+    },
+    {
+        "title": "What to Drink ?",
+        "subtitle": "Application de recette de cocktails",
+        "img": "/img/wtd.png"
+    },
+    {
+        "title": "Scraping avec puppeteer",
+        "subtitle": "Mes premiers pas en scraping",
+        "img": "/img/puppeteer.jpeg"
+    }
+]
