@@ -1,32 +1,95 @@
 [
     {
+        "id": 1,
         "title": "MyImmo",
         "subtitle": "Application immobilière",
-        "img": "/img/myimmo.png"
+        "picture": [ 
+            {"img": "/img/myimmo.png"},
+            {"img": "/img/myimmo2.png"}
+        ],
+        "description": "Création d'une appplication de recherche immobilière en NextJS et Strapi. Ce projet me permet d'approfondir mes connaissances dans la gestion des cookies et des sessions utilisateurs",
+        "url_repo": "https://github.com/AlexisF9/MyImmo",
+        "tags": [
+            "NextJS",
+            "Strapi",
+            "SASS"
+        ]  
     },
     {
+        "id": 2,
         "title": "La caisse d'épargne",
         "subtitle": "Jeux de nöel",
-        "img": "/img/izicarte.png"
+        "picture": [ 
+            {"img": "/img/izicarte.png"},
+            {"img": "/img/izicarte.png"}
+        ],
+        "description": "Durant mon alternance chez TBWA/Paris j'ai eu l'occasion de réaliser un mini-jeux pour la Caisse d'Epargne qui est une chasse aux trésors dans une vitrine de nöel. J'ai réalisé cette application en NextJS.",
+        "url_repo": null,
+        "tags": [
+            "Projet entreprise",
+            "NextJS"
+        ]  
     },
     {
+        "id": 3,
         "title": "Projet Twitter",
         "subtitle": "Blog style Twitter",
-        "img": "/img/twitter.png"
+        "picture": [ 
+            {"img": "/img/twitter.png"},
+            {"img": "/img/twitter.png"}
+        ],
+        "description": "Projet personnel de création d'un blog du style Twitter. Le back est sur Strapi, un CMS gratuit de création d'API et le front sur NextJS. Le blog est dynamique et permet de pouvoir s'inscrire, se connecter, voir son profil et le modifier ou encore de poster des posts ou des commentaires.",
+        "url_repo": "https://github.com/AlexisF9/strapi-twitter",
+        "tags": [
+            "NextJS",
+            "Strapi",
+            "SASS",
+            "MUI"
+        ]  
     },
     {
+        "id": 4,
         "title": "Landing GMF",
         "subtitle": "Landing simple pour GMF",
-        "img": "/img/gmf.png"
+        "picture": [ 
+            {"img": "/img/gmf.png"},
+            {"img": "/img/gmf.png"}
+        ],
+        "description": "C'est l'une de mes premières landing chez TBWA, j'ai faits cette landing pour GMF en NextJS.",
+        "url_repo": null,
+        "tags": [
+            "Projet entreprise",
+            "NextJS",
+            "SASS" 
+        ]  
     },
     {
+        "id": 5,
         "title": "What to Drink ?",
         "subtitle": "Application de recette de cocktails",
-        "img": "/img/wtd.png"
+        "picture": [ 
+            {"img": "/img/wtd.png"},
+            {"img": "/img/wtd.png"}
+        ],
+        "description": "Projet personnel de création d'une application de cocktails en NextJS avec l'intégration de l'API TheCocktailsDB. L'application est en ligne si vous souhaitez la tester (Lien dans mon github).",
+        "url_repo": "https://github.com/AlexisF9/what-to-drink",
+        "tags": [
+            "NextJS",
+            "SASS" 
+        ] 
     },
     {
+        "id": 6,
         "title": "Scraping avec puppeteer",
         "subtitle": "Mes premiers pas en scraping",
-        "img": "/img/puppeteer.jpeg"
+        "picture": [ 
+            {"img": "/img/puppeteer.jpeg"},
+            {"img": "/img/puppeteer.jpeg"}
+        ],
+        "description": "Le scraping est un concept qui m'était inconnu avant mon année de Bachelor. J'ai trouvé le concept très intéressant, ce qui m'a donné l'envie d'en apprendre davantage et de m'y essayer pour la première fois avec Puppeteer.",
+        "url_repo": "https://github.com/AlexisF9/puppeteer-scraping",
+        "tags": [
+            "Puppeteer"
+        ]  
     }
 ]
