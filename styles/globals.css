@@ -18,6 +18,10 @@ body {
   background-color: #1b262c;
 }
 
+h1 {
+  color: #1b262c;
+}
+
 a {
   color: inherit;
   text-decoration: none;
