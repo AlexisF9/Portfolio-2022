@@ -13,7 +13,10 @@ export default function Modal({ rea, open, setModal }) {
   }, [open]);
 
   return (
-    <div ref={modal} className="relative flex flex-col bg-white items-center">
+    <div
+      ref={modal}
+      className="relative h-[100vh] lg:h-auto flex flex-col bg-white items-center"
+    >
       <button
         onClick={() => {
           setModal(null);
@@ -22,15 +25,15 @@ export default function Modal({ rea, open, setModal }) {
       >
         close
       </button>
-      <div className="h-[100vh]">
+      <div className="lg:h-[100vh] p-8 lg:p-0">
         <h2 className=" text-center font-[NewYork] text-6xl h-[30vh] flex justify-center items-center">
           {rea.title}
         </h2>
         {/* <Gallery picture={rea.pictures} /> */}
-        <img src={rea.picture[0].img} className="h-[70vh] shadow-lg" />
+        <img src={rea.picture[0].img} className="lg:h-[70vh] shadow-lg" />
       </div>
 
-      <div className="my-20">
+      <div className="my-20 p-8 lg:p-0">
         <p>{rea.description}</p>
       </div>
     </div>
