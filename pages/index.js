@@ -1,9 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 import { gsap } from "gsap";
-import { createRef } from "react";
+import { createRef, useState } from "react";
+import Modal from "../components/Modal";
 
 export default function Home({ realisations }) {
+  const [modal, setModal] = useState(null);
+
   const title = createRef();
   const intro = createRef();
   const rea = createRef();
@@ -32,10 +35,6 @@ export default function Home({ realisations }) {
     });
   }
 
-  function back() {
-    tl.reverse();
-  }
-
   return (
     <main className="flex h-[100vh]">
       <Head>
@@ -45,14 +44,20 @@ export default function Home({ realisations }) {
           content="Bienvenue sur mon portfolio. Je suis développeur frontend et ici je vous partages mes réalisations !"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
       </Head>
 
       <div
         ref={intro}
-        className="relative w-full md:w-[70%] min-h-full flex flex-col bg-white justify-center items-center"
+        className="relative w-full md:w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
       >
         <div ref={title}>
-          <h1 className="font-[NewYork] md:text-8xl">Alexis Flacher</h1>
+          <h1 className="font-[NewYork]  text-7xl md:text-7xl lg:text-8xl">
+            Alexis Flacher
+          </h1>
           <p
             className="mt-2 cursor-pointer uppercase hover:tracking-widest	ease-in-out duration-300"
             onClick={() => handleClick()}
@@ -68,6 +73,7 @@ export default function Home({ realisations }) {
               <a>Linkedin</a>
             </Link>
           </div>
+
           <p className="absolute left-10 bottom-10">
             alexis.flacher38@gmail.com
           </p>
@@ -82,36 +88,38 @@ export default function Home({ realisations }) {
           ref={listeRea}
           className="h-0 opacity-0 pointer-events-none translate-y-[100%] flex flex-col w-full  items-center overflow-y-scroll"
         >
-          <p onClick={() => back()}>retour</p>
-          {/* snap-y snap-proximity */}
           {realisations.map((item, index) => {
             return (
-              // snap-center
               <div
                 key={index}
-                className="p-6 md:p-0 relative group snap-always w-full md:min-h-[50vh] min-h-[100vh]"
+                className="cursor-pointer	p-6 md:p-0 relative group snap-always w-full md:min-h-[50vh] min-h-[100vh]"
+                onClick={() => {
+                  setModal(item.id - 1);
+                }}
               >
-                <Link href={"/realisation/" + item.id}>
-                  <a>
-                    <div className="w-full flex flex-col absolute top-2/4 left-1/2 translate-x-[-50%] translate-y-[-50%] z-10 text-center  pointer-events-none text-white">
-                      <p className=" group-hover:tracking-wider ease-in-out duration-500 tracking-normal font-[NewYork] md:text-5xl	text-4xl ">
-                        {item.title}
-                      </p>
-                      <p className="mt-3 md:group-hover:opacity-100 md:group-hover:translate-y-0 md:opacity-0 md:translate-y-4 ease-in-out duration-500 uppercase md:text-lg text-sm">
-                        {item.subtitle}
-                      </p>
-                    </div>
+                <div className="w-full flex flex-col absolute top-2/4 left-1/2 translate-x-[-50%] translate-y-[-50%] z-10 text-center  pointer-events-none text-white">
+                  <p className=" group-hover:tracking-wider ease-in-out duration-500 tracking-normal font-[NewYork] md:text-5xl	text-4xl ">
+                    {item.title}
+                  </p>
+                  <p className="mt-3 md:group-hover:opacity-100 md:group-hover:translate-y-0 md:opacity-0 md:translate-y-4 ease-in-out duration-500 uppercase md:text-lg text-sm">
+                    {item.subtitle}
+                  </p>
+                </div>
 
-                    <img
-                      src={item.picture[0].img}
-                      className="opacity-20 scale-100 translate-y-0 md:group-hover:opacity-20 md:group-hover:scale-100 md:group-hover:translate-y-0 md:translate-y-7 ease-in-out[cubic-bezier(.42,0,0,1.15)] duration-500 h-full w-full object-cover	object-center	 md:opacity-0 md:scale-90	mx-auto	"
-                    />
-                  </a>
-                </Link>
+                <img
+                  src={item.picture[0].img}
+                  className="opacity-20 scale-100 translate-y-0 md:group-hover:opacity-20 md:group-hover:scale-100 md:group-hover:translate-y-0 md:translate-y-7 ease-in-out[cubic-bezier(.42,0,0,1.15)] duration-500 h-full w-full object-cover	object-center	 md:opacity-0 md:scale-90	mx-auto	"
+                />
               </div>
             );
           }, [])}
         </div>
+
+        {modal != null && (
+          <div className="absolute inset-0 z-30">
+            <Modal setModal={setModal} open={true} rea={realisations[modal]} />
+          </div>
+        )}
       </div>
     </main>
   );

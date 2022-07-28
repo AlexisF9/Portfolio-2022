@@ -1,0 +1,38 @@
+import { createRef, useEffect } from "react";
+import { gsap } from "gsap";
+
+export default function Modal({ rea, open, setModal }) {
+  const modal = createRef();
+
+  const tl = gsap.timeline({ ease: "power1.out" });
+
+  useEffect(() => {
+    tl.to(modal.current, 1, {
+      clipPath: "circle(142% at 100% 0)",
+    });
+  }, [open]);
+
+  return (
+    <div ref={modal} className="relative flex flex-col bg-white items-center">
+      <button
+        onClick={() => {
+          setModal(null);
+        }}
+        className="material-symbols-outlined fixed top-4 right-4 md:top-20 md:right-20 text-5xl	"
+      >
+        close
+      </button>
+      <div className="h-[100vh]">
+        <h2 className=" text-center font-[NewYork] text-6xl h-[30vh] flex justify-center items-center">
+          {rea.title}
+        </h2>
+        {/* <Gallery picture={rea.pictures} /> */}
+        <img src={rea.picture[0].img} className="h-[70vh] shadow-lg" />
+      </div>
+
+      <div className="my-20">
+        <p>{rea.description}</p>
+      </div>
+    </div>
+  );
+}
