@@ -48,6 +48,10 @@ export default function Home({ realisations }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
       </Head>
 
       <div
@@ -55,13 +59,14 @@ export default function Home({ realisations }) {
         className="relative w-full md:w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
       >
         <div ref={title}>
-          <h1 className="font-[NewYork]  text-7xl md:text-7xl lg:text-8xl">
+          <h1 className="font-[NewYork] text-7xl md:text-7xl lg:text-8xl">
             Alexis Flacher
           </h1>
           <p
-            className="mt-2 cursor-pointer uppercase hover:tracking-widest	ease-in-out duration-300"
+            className="pr-4 relative group w-max mt-2 cursor-pointer uppercase hover:tracking-wider ease-in-out duration-700"
             onClick={() => handleClick()}
           >
+            <span className="absolute right-0 group-hover:w-full ease-in-out duration-500 w-2.5 h-0.5 top-2/4 bg-cyan-500"></span>
             Liste de mes réalisations
           </p>
 
