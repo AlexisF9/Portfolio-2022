@@ -70,12 +70,16 @@ export default function Home({ realisations }) {
             Liste de mes réalisations
           </p>
 
-          <div className="absolute right-10 top-10">
+          <div className="absolute flex right-10 top-10">
             <Link href="https://github.com/AlexisF9">
-              <a className="mr-4">GitHub</a>
+              <a target="_blank" className="mr-4">
+                <img className="w-10" src="/logos/github.png" />
+              </a>
             </Link>
             <Link href="https://www.linkedin.com/in/alexis-flacher-772ba7197/">
-              <a>Linkedin</a>
+              <a target="_blank">
+                <img className="w-10" src="/logos/linkedin.png" />
+              </a>
             </Link>
           </div>
 
