@@ -63,7 +63,7 @@ export default function Home({ realisations }) {
             Alexis Flacher
           </h1>
           <p
-            className="pr-4 relative group w-max mt-2 cursor-pointer uppercase hover:tracking-wider ease-in-out duration-700"
+            className="pr-4 mx-auto md:mx-0 relative group w-max mt-2 cursor-pointer uppercase hover:tracking-wider ease-in-out duration-700"
             onClick={() => handleClick()}
           >
             <span className="absolute right-0 group-hover:w-full ease-in-out duration-500 w-2.5 h-0.5 top-2/4 bg-cyan-500"></span>
