@@ -15,7 +15,7 @@ export default function Modal({ rea, open, setModal }) {
   return (
     <div
       ref={modal}
-      className="relative h-[100vh] lg:h-auto flex flex-col bg-white items-center"
+      className="relative h-[100vh] lg:p-0 p-8 lg:h-auto flex flex-col bg-white items-center"
     >
       <button
         onClick={() => {
@@ -25,7 +25,7 @@ export default function Modal({ rea, open, setModal }) {
       >
         close
       </button>
-      <div className="lg:h-[100vh] p-8 lg:p-0">
+      <div className="lg:h-[100vh] p-0">
         <h2 className=" text-center font-[NewYork] text-6xl h-[30vh] flex justify-center items-center">
           {rea.title}
         </h2>
@@ -33,7 +33,7 @@ export default function Modal({ rea, open, setModal }) {
         <img src={rea.picture[0].img} className="lg:h-[70vh] shadow-lg" />
       </div>
 
-      <div className="my-20 p-8 lg:p-0">
+      <div className="my-10 lg:my-20 p-0">
         <p>{rea.description}</p>
       </div>
     </div>
