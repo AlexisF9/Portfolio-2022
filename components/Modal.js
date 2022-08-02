@@ -26,12 +26,29 @@ export default function Modal({ rea, open, setModal }) {
       >
         close
       </button>
-      <div className="p-0 w-[90%] lg:w-[80%]">
-        <h2 className=" text-center font-[NewYork] text-6xl h-[30vh] flex justify-center items-center">
+      <div className="p-0 w-[90%]">
+        <h2 className="text-center font-[NewYork] text-6xl h-[25vh] flex justify-center items-center">
           {rea.title}
         </h2>
-        <Slider pictures={rea.picture} />
-        <p className="my-10">{rea.description}</p>
+        <div className="md:flex">
+          <Slider pictures={rea.picture} />
+          <div className="pl-0 md:pl-10">
+            <p className="md:my-0 my-10 md:min-w-[30%]">{rea.description}</p>
+
+            <ul className="flex md:mt-8 mt-0">
+              {rea.tags.map((item, i) => {
+                return (
+                  <li
+                    className="mr-2 border border-black rounded-md w-max px-2 py-1"
+                    key={i}
+                  >
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
