@@ -63,9 +63,9 @@ export default function Home({ realisations }) {
             Liste de mes réalisations
           </p>
 
-          <div className="absolute flex right-10 top-10">
+          <div className="absolute flex right-10 top-10 md:flex-row flex-col ">
             <Link href="https://github.com/AlexisF9">
-              <a target="_blank" className="mr-4">
+              <a target="_blank" className="md:mr-4 md:mb-0 mb-5">
                 <img className="w-10" src="/logos/github.png" />
               </a>
             </Link>
@@ -78,9 +78,12 @@ export default function Home({ realisations }) {
 
           <Link href="https://www.tbwa-paris.com/fr">
             <a>
-              <p className="flex items-center absolute top-10 left-10">
+              <p className="w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
                 Développeur frontend chez TBWA\Paris{" "}
-                <img src="/logos/tbwa.jpg" className="ml-2 w-5 h-5" />
+                <img
+                  src="/logos/tbwa.jpg"
+                  className="md:ml-2 ml-0 md:mt-0 mt-2 w-8 h-8"
+                />
               </p>
             </a>
           </Link>
