@@ -71,7 +71,7 @@ export default function Home({ realisations }) {
 
       <div
         ref={intro}
-        className="relative opacity-0 w-full w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
+        className="relative opacity-0 w-full md:w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
       >
         <div ref={introContent} className="opacity-0">
           <h1 className="font-[NewYork] text-7xl md:text-7xl lg:text-8xl">

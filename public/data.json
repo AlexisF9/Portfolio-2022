@@ -4,8 +4,9 @@
         "title": "MyImmo",
         "subtitle": "Application immobilière",
         "picture": [ 
-            {"img": "/img/myimmo.png"},
-            {"img": "/img/myimmo2.png"}
+            {"img": "/img/MyImmo/myimmo.png"},
+            {"img": "/img/MyImmo/myimmo2.png"},
+            {"img": "/img/MyImmo/myimmo3.png"}
         ],
         "description": "Création d'une appplication de recherche immobilière en NextJS et Strapi. Ce projet me permet d'approfondir mes connaissances dans la gestion des cookies et des sessions utilisateurs",
         "url_repo": "https://github.com/AlexisF9/MyImmo",
@@ -20,8 +21,9 @@
         "title": "La caisse d'épargne",
         "subtitle": "Jeux de nöel",
         "picture": [ 
-            {"img": "/img/izicarte.png"},
-            {"img": "/img/izicarte.png"}
+            {"img": "/img/izicarte/izicarte.png"},
+            {"img": "/img/izicarte/izicarte2.png"},
+            {"img": "/img/izicarte/izicarte3.png"}
         ],
         "description": "Durant mon alternance chez TBWA/Paris j'ai eu l'occasion de réaliser un mini-jeux pour la Caisse d'Epargne qui est une chasse aux trésors dans une vitrine de nöel. J'ai réalisé cette application en NextJS.",
         "url_repo": null,
@@ -35,8 +37,9 @@
         "title": "Projet Twitter",
         "subtitle": "Blog style Twitter",
         "picture": [ 
-            {"img": "/img/twitter.png"},
-            {"img": "/img/twitter.png"}
+            {"img": "/img/twitter/twitter.png"},
+            {"img": "/img/twitter/twitter2.png"},
+            {"img": "/img/twitter/twitter3.png"}
         ],
         "description": "Projet personnel de création d'un blog du style Twitter. Le back est sur Strapi, un CMS gratuit de création d'API et le front sur NextJS. Le blog est dynamique et permet de pouvoir s'inscrire, se connecter, voir son profil et le modifier ou encore de poster des posts ou des commentaires.",
         "url_repo": "https://github.com/AlexisF9/strapi-twitter",
@@ -52,8 +55,9 @@
         "title": "Landing GMF",
         "subtitle": "Landing simple pour GMF",
         "picture": [ 
-            {"img": "/img/gmf.png"},
-            {"img": "/img/gmf.png"}
+            {"img": "/img/GMF/gmf.png"},
+            {"img": "/img/GMF/gmf2.png"},
+            {"img": "/img/GMF/gmf3.png"}
         ],
         "description": "C'est l'une de mes premières landing chez TBWA, j'ai faits cette landing pour GMF en NextJS.",
         "url_repo": null,
@@ -68,8 +72,9 @@
         "title": "What to Drink ?",
         "subtitle": "Application de recette de cocktails",
         "picture": [ 
-            {"img": "/img/wtd.png"},
-            {"img": "/img/wtd.png"}
+            {"img": "/img/what-to-drink/what-to-drink.png"},
+            {"img": "/img/what-to-drink/what-to-drink2.png"},
+            {"img": "/img/what-to-drink/what-to-drink3.png"}
         ],
         "description": "Projet personnel de création d'une application de cocktails en NextJS avec l'intégration de l'API TheCocktailsDB. L'application est en ligne si vous souhaitez la tester (Lien dans mon github).",
         "url_repo": "https://github.com/AlexisF9/what-to-drink",
