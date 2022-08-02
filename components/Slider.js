@@ -3,14 +3,19 @@ import { useState } from "react";
 export default function Slider({ pictures }) {
   const [indexPicture, setIndexPicture] = useState(0);
 
-  const indexPictures = (e, max) => {
-    const newIndex = indexPicture + e;
-    if (newIndex < 0 || newIndex > max) {
-      return;
-    } else {
-      setIndexPicture(newIndex);
-    }
-  };
+  // const indexPictures = (e, max) => {
+  //   const newIndex = indexPicture + e;
+  //   if (newIndex < 0 || newIndex > max) {
+  //     return;
+  //   } else {
+  //     setIndexPicture(newIndex);
+  //   }
+  // };
+
+  const urlServ =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000/"
+      : "https://portfolio-2022-liard.vercel.app/";
 
   return (
     <div className="relative ">
@@ -48,7 +53,7 @@ export default function Slider({ pictures }) {
               style={{
                 transform: `translateX(-${indexPicture * 100}%)`,
               }}
-              src={"http://localhost:3000" + item.img}
+              src={urlServ + item.img}
             />
           );
         })}
