@@ -143,7 +143,7 @@ export async function getServerSideProps() {
   const urlServ =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000/"
-      : "https://portfolio-2022-liard.vercel.app/";
+      : "https://portfolio-tau-tawny.vercel.app/";
   const res = await fetch(`${urlServ}/data.json`);
   const realisations = await res.json();
 

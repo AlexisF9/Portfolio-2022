@@ -6,7 +6,7 @@ export default function Slider({ pictures }) {
   const urlServ =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000/"
-      : "https://portfolio-2022-liard.vercel.app/";
+      : "https://portfolio-tau-tawny.vercel.app/";
 
   return (
     <div className="relative ">
