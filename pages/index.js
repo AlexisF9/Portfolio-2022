@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { createRef, useEffect, useState } from "react";
@@ -48,27 +47,6 @@ export default function Home({ realisations }) {
 
   return (
     <main className="flex h-[100vh]">
-      <Head>
-        <title>Alexis Flacher - Portfolio</title>
-        <meta
-          name="description"
-          content="Bienvenue sur mon portfolio. Je suis développeur frontend et ici je vous partages mes réalisations !"
-        />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-        />
-      </Head>
-
       <div
         ref={intro}
         className="relative opacity-0 w-full md:w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
@@ -98,6 +76,14 @@ export default function Home({ realisations }) {
             </Link>
           </div>
 
+          <Link href="https://www.tbwa-paris.com/fr">
+            <a>
+              <p className="flex items-center absolute top-10 left-10">
+                Développeur frontend chez TBWA\Paris{" "}
+                <img src="/logos/tbwa.jpg" className="ml-2 w-5 h-5" />
+              </p>
+            </a>
+          </Link>
           <p className="absolute left-10 bottom-10">
             alexis.flacher38@gmail.com
           </p>
