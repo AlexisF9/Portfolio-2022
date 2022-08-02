@@ -22,20 +22,20 @@ export default function Modal({ rea, open, setModal }) {
         onClick={() => {
           setModal(null);
         }}
-        className="material-symbols-outlined fixed top-4 right-4 lg:top-20 lg:right-20 text-[40px]	"
+        className="material-symbols-outlined fixed top-4 right-4 md:top-20 md:right-20 text-[40px]	"
       >
         close
       </button>
       <div className="p-0 w-[90%]">
-        <h2 className="text-start lg:text-center font-[NewYork] text-6xl h-[30vh] lg:h-[25vh] flex lg:justify-center items-center">
+        <h2 className="text-start md:text-center font-[NewYork] text-6xl h-[30vh] md:h-[25vh] flex md:justify-center items-center">
           {rea.title}
         </h2>
-        <div className="lg:flex">
-          <Slider pictures={rea.picture} />
-          <div className="pl-0 lg:pl-10">
-            <p className="lg:my-0 my-10 lg:min-w-[500px]">{rea.description}</p>
+        <div className="md:flex">
+          {rea.picture && <Slider pictures={rea.picture} />}
+          <div className="pl-0 md:pl-10">
+            <p className="md:my-0 my-10 md:min-w-[30%]">{rea.description}</p>
 
-            <ul className="flex lg:mt-8 mt-0">
+            <ul className="flex md:mt-8 mt-0">
               {rea.tags.map((item, i) => {
                 return (
                   <li
