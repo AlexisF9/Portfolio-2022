@@ -3,15 +3,6 @@ import { useState } from "react";
 export default function Slider({ pictures }) {
   const [indexPicture, setIndexPicture] = useState(0);
 
-  // const indexPictures = (e, max) => {
-  //   const newIndex = indexPicture + e;
-  //   if (newIndex < 0 || newIndex > max) {
-  //     return;
-  //   } else {
-  //     setIndexPicture(newIndex);
-  //   }
-  // };
-
   const urlServ =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000/"
@@ -31,18 +22,6 @@ export default function Slider({ pictures }) {
             ></span>
           );
         })}
-        {/* <button
-          onClick={() => indexPictures(-1, pictures.length - 1)}
-          className="material-symbols-outlined rotate-180	text-[40px]"
-        >
-          trending_flat
-        </button>
-        <button
-          onClick={() => indexPictures(+1, pictures.length - 1)}
-          className="material-symbols-outlined text-[40px]"
-        >
-          trending_flat
-        </button> */}
       </div>
       <div className="shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full flex overflow-hidden flex-nowrap ">
         {pictures.map((item, i) => {
