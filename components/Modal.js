@@ -27,7 +27,7 @@ export default function Modal({ rea, open, setModal }) {
         close
       </button>
       <div className="p-0 w-[90%]">
-        <h2 className="text-center font-[NewYork] text-6xl h-[25vh] flex justify-center items-center">
+        <h2 className="text-center font-[NewYork] text-6xl h-[30vh] md:h-[25vh] flex md:justify-center items-center">
           {rea.title}
         </h2>
         <div className="md:flex">

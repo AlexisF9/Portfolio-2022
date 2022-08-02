@@ -78,7 +78,7 @@ export default function Home({ realisations }) {
 
           <Link href="https://www.tbwa-paris.com/fr">
             <a>
-              <p className="w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
+              <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
                 Développeur frontend chez TBWA\Paris{" "}
                 <img
                   src="/logos/tbwa.jpg"
