@@ -1,21 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
 import { gsap } from "gsap";
-import { createRef, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import Modal from "../components/Modal";
 
 export default function Home({ realisations }) {
   const [modal, setModal] = useState(null);
 
-  const title = createRef();
   const intro = createRef();
+  const introContent = createRef();
   const rea = createRef();
   const listeRea = createRef();
 
   const tl = gsap.timeline({ ease: "power1.out" });
 
   function handleClick() {
-    tl.to(title.current, 0.8, {
+    tl.to(introContent.current, 0.8, {
       opacity: 0,
       pointerEvents: "none",
     });
@@ -34,6 +34,17 @@ export default function Home({ realisations }) {
       pointerEvents: "initial",
     });
   }
+
+  const tr = gsap.timeline({ ease: "power1.out" });
+
+  useEffect(() => {
+    tr.to(intro.current, 0.8, {
+      width: "100%",
+    });
+    tr.to(introContent.current, 0.8, {
+      opacity: 1,
+    });
+  }, []);
 
   return (
     <main className="flex h-[100vh]">
@@ -60,9 +71,9 @@ export default function Home({ realisations }) {
 
       <div
         ref={intro}
-        className="relative w-full md:w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
+        className="relative w-0 min-h-full flex flex-col bg-white justify-center items-center text-center"
       >
-        <div ref={title}>
+        <div ref={introContent} className="opacity-0">
           <h1 className="font-[NewYork] text-7xl md:text-7xl lg:text-8xl">
             Alexis Flacher
           </h1>
