@@ -31,7 +31,11 @@ export default function Modal({ rea, open, setModal }) {
           {rea.title}
         </h2>
         <div className="md:flex">
-          {rea.picture && <Slider pictures={rea.picture} />}
+          {rea.picture ? (
+            <Slider pictures={rea.picture} />
+          ) : (
+            <p>Chargement des images...</p>
+          )}
           <div className="pl-0 md:pl-10">
             <p className="md:my-0 my-10 md:min-w-[30%]">{rea.description}</p>
 
