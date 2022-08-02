@@ -19,7 +19,7 @@ export default function Home({ realisations }) {
       opacity: 0,
       pointerEvents: "none",
     });
-    tl.to(intro.current, 0.8, {
+    tl.to(intro.current, 1, {
       width: "0px",
     });
     tl.to(rea.current, 1, {
@@ -38,7 +38,7 @@ export default function Home({ realisations }) {
   const tr = gsap.timeline({ ease: "power1.out" });
 
   useEffect(() => {
-    tr.to(intro.current, 0.8, {
+    tr.to(intro.current, 1, {
       width: "100%",
     });
     tr.to(introContent.current, 0.8, {
