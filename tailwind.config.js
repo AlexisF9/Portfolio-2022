@@ -38,6 +38,12 @@ module.exports = {
       borderRadius: {
         100: "100%",
       },
+      boxShadow: {
+        "3xl": "0 0 60px -15px rgba(0, 0, 0, 0.3)",
+      },
+      inset: {
+        "-50px": "-50px",
+      },
     },
   },
   plugins: [],

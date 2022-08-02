@@ -14,21 +14,21 @@ export default function Slider({ pictures }) {
 
   return (
     <div className="relative ">
-      <div className="flex absolute items-center z-10">
+      <div className="flex top-[-50px] absolute items-center z-10">
         <button
           onClick={() => indexPictures(-1, pictures.length - 1)}
-          className="material-symbols-outlined rotate-180	"
+          className="material-symbols-outlined rotate-180	text-5xl"
         >
           trending_flat
         </button>
         <button
           onClick={() => indexPictures(+1, pictures.length - 1)}
-          className="material-symbols-outlined"
+          className="material-symbols-outlined text-5xl"
         >
           trending_flat
         </button>
       </div>
-      <div className="shadow-lg w-full flex overflow-hidden flex-nowrap ">
+      <div className="shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full flex overflow-hidden flex-nowrap ">
         {pictures.map((item, i) => {
           return (
             <img
