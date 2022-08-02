@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#1b262c",
+      },
       spacing: {
         "1/2": "-50%",
         100: "100%",
@@ -16,7 +19,6 @@ module.exports = {
       },
       height: {
         100: "100vh",
-        80: "80vh",
         70: "70vh",
         50: "50vh",
         30: "30vh",
@@ -25,7 +27,6 @@ module.exports = {
       },
       width: {
         20: "-20px",
-        80: "80vh",
         90: "90%",
         80: "80%",
         70: "70%",
@@ -42,7 +43,11 @@ module.exports = {
         "3xl": "0 0 60px -15px rgba(0, 0, 0, 0.3)",
       },
       inset: {
-        "-50px": "-50px",
+        "-1.5rem": "-1.5rem",
+      },
+      fontSize: {
+        lg: ["20px", "28px"],
+        xl: ["30px", "40px"],
       },
     },
   },

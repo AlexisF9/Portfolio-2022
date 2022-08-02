@@ -22,7 +22,7 @@ export default function Modal({ rea, open, setModal }) {
         onClick={() => {
           setModal(null);
         }}
-        className="material-symbols-outlined fixed top-4 right-4 md:top-20 md:right-20 text-5xl	"
+        className="material-symbols-outlined fixed top-4 right-4 md:top-20 md:right-20 text-[40px]	"
       >
         close
       </button>
