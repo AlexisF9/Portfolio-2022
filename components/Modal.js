@@ -1,15 +1,26 @@
 import { createRef, useEffect } from "react";
 import { gsap } from "gsap";
 import Slider from "./Slider";
+import Link from "next/link";
 
 export default function Modal({ rea, open, setModal }) {
   const modal = createRef();
+  const title = createRef();
+  const content = createRef();
 
   const tl = gsap.timeline({ ease: "power1.out" });
 
   useEffect(() => {
     tl.to(modal.current, 1, {
       clipPath: "circle(142% at 100% 0)",
+    });
+    tl.to(title.current, 0.5, {
+      transform: "translateY(0)",
+      opacity: 1,
+    });
+    tl.to(content.current, 0.5, {
+      transform: "scale(1)",
+      opacity: 1,
     });
   }, [open]);
 
@@ -27,10 +38,30 @@ export default function Modal({ rea, open, setModal }) {
         close
       </button>
       <div className="p-0 w-[90%] md:w-[80%]">
-        <h2 className="text-start md:text-center font-[NewYork] text-6xl h-[30vh] md:h-[25vh] flex md:justify-center items-center">
-          {rea.title}
-        </h2>
-        <div>
+        {rea.url_repo === null ? (
+          <h2
+            ref={title}
+            className="opacity-0 translate-y-4 text-start md:text-center font-[NewYork] text-6xl h-[30vh] md:h-[25vh] flex md:justify-center items-center"
+          >
+            {rea.title}{" "}
+          </h2>
+        ) : (
+          <Link href={rea.url_repo}>
+            <a target="_blank">
+              <h2
+                ref={title}
+                className="opacity-0 translate-y-4 text-start md:text-center font-[NewYork] text-6xl h-[30vh] md:h-[25vh] flex md:justify-center items-center"
+              >
+                {rea.title}{" "}
+                <sup>
+                  <span class="material-symbols-outlined">open_in_new</span>
+                </sup>
+              </h2>
+            </a>
+          </Link>
+        )}
+
+        <div ref={content} className="opacity-0 scale-90">
           <Slider pictures={rea.picture} />
           <p className="mt-10 md:min-w-[30%]">{rea.description}</p>
 
