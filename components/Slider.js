@@ -1,7 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Slider({ pictures }) {
   const [indexPicture, setIndexPicture] = useState(0);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     console.log(timer);
+  //     if (indexPicture === 2) {
+  //       setIndexPicture(0);
+  //     } else {
+  //       setIndexPicture(indexPicture + 1);
+  //     }
+  //   }, 1000);
+  //   return () => {
+  //     console.log("timer", timer);
+  //     clearTimeout(timer);
+  //   };
+  // }, [indexPicture]);
 
   return (
     <div className="relative ">
@@ -13,7 +28,9 @@ export default function Slider({ pictures }) {
               className={`rounded-full h-2 w-16 mr-3 cursor-pointer ease-in-out duration-300 ${
                 indexPicture === i ? "bg-[#1b262c]" : "bg-slate-300"
               }`}
-              onClick={() => setIndexPicture(i)}
+              onClick={() => {
+                setIndexPicture(i);
+              }}
             ></span>
           );
         })}
@@ -28,6 +45,7 @@ export default function Slider({ pictures }) {
                 transform: `translateX(-${indexPicture * 100}%)`,
               }}
               src={item.img}
+              alt={"image" + index}
             />
           );
         })}

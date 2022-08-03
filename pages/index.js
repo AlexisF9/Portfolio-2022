@@ -67,12 +67,20 @@ export default function Home({ realisations }) {
           <div className="absolute flex right-10 top-10 md:flex-row flex-col ">
             <Link href="https://github.com/AlexisF9">
               <a target="_blank" className="md:mr-4 md:mb-0 mb-5">
-                <img className="w-10" src="/logos/github.png" />
+                <img
+                  className="w-10"
+                  src="/logos/github.png"
+                  alt="logo GitHub"
+                />
               </a>
             </Link>
             <Link href="https://www.linkedin.com/in/alexis-flacher-772ba7197/">
               <a target="_blank">
-                <img className="w-10" src="/logos/linkedin.png" />
+                <img
+                  className="w-10"
+                  src="/logos/linkedin.png"
+                  alt="logo LinkedIn"
+                />
               </a>
             </Link>
           </div>
@@ -84,6 +92,7 @@ export default function Home({ realisations }) {
                 <img
                   src="/logos/tbwa.jpg"
                   className="md:ml-2 ml-0 md:mt-0 mt-2 w-8 h-8"
+                  alt="logo TBWA\Paris"
                 />
               </p>
             </a>
@@ -123,6 +132,7 @@ export default function Home({ realisations }) {
                 </div>
 
                 <img
+                  alt={"image" + index}
                   src={item.picture[0].img}
                   className="opacity-20 scale-100 translate-y-0 md:group-hover:opacity-20 md:group-hover:scale-100 md:group-hover:translate-y-0 md:translate-y-7 ease-in-out[cubic-bezier(.42,0,0,1.15)] duration-500 h-full w-full object-cover	object-center	 md:opacity-0 md:scale-90	mx-auto	"
                 />
