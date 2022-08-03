@@ -54,7 +54,7 @@ export default function Modal({ rea, open, setModal }) {
               >
                 {rea.title}{" "}
                 <sup>
-                  <span class="material-symbols-outlined">open_in_new</span>
+                  <span className="material-symbols-outlined">open_in_new</span>
                 </sup>
               </h2>
             </a>
@@ -66,11 +66,11 @@ export default function Modal({ rea, open, setModal }) {
           <p className="mt-10 md:min-w-[30%]">{rea.description}</p>
 
           <ul className="flex mt-5 mb-20">
-            {rea.tags.map((item, i) => {
+            {rea.tags.map((item, index) => {
               return (
                 <li
                   className="mr-2 border border-black rounded-md w-max px-2 py-1"
-                  key={i}
+                  key={index}
                 >
                   {item}
                 </li>

@@ -24,10 +24,10 @@ export default function Slider({ pictures }) {
         })}
       </div>
       <div className="shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)] w-full flex overflow-hidden flex-nowrap ">
-        {pictures.map((item, i) => {
+        {pictures.map((item, index) => {
           return (
             <img
-              key={i}
+              key={index}
               className="h-full ease-in-out duration-300"
               style={{
                 transform: `translateX(-${indexPicture * 100}%)`,
