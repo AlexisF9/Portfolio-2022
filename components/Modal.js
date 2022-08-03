@@ -41,14 +41,14 @@ export default function Modal({ rea, open, setModal }) {
         {rea.url_repo === null ? (
           <h2
             ref={title}
-            className="opacity-0 translate-y-4 text-start md:text-center font-[NewYork] text-4xl md:text-6xl md:h-[30vh] h-[25vh] flex md:justify-center items-center"
+            className="opacity-0 translate-y-4 text-start md:text-center font-[NewYork] text-4xl md:text-6xl h-[30vh] flex md:justify-center items-center"
           >
             {rea.title}{" "}
           </h2>
         ) : (
           <h2
             ref={title}
-            className="opacity-0 translate-y-4 text-start md:text-center font-[NewYork] text-4xl md:text-6xl md:h-[30vh] h-[25vh] flex md:justify-center items-center"
+            className="opacity-0 translate-y-4 text-start md:text-center font-[NewYork] text-4xl md:text-6xl h-[30vh] flex md:justify-center items-center"
           >
             {rea.title}{" "}
             <Link href={rea.url_repo}>

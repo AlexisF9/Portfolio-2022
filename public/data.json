@@ -85,7 +85,7 @@
     },
     {
         "id": 6,
-        "title": "Scraping avec puppeteer",
+        "title": "Projet scraping",
         "subtitle": "Mes premiers pas en scraping",
         "picture": [ 
             {"img": "/img/puppeteer.jpeg"},
