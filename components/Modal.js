@@ -46,19 +46,19 @@ export default function Modal({ rea, open, setModal }) {
             {rea.title}{" "}
           </h2>
         ) : (
-          <Link href={rea.url_repo}>
-            <a target="_blank">
-              <h2
-                ref={title}
-                className="opacity-0 translate-y-4 text-start md:text-center font-[NewYork] text-6xl h-[30vh] md:h-[25vh] flex md:justify-center items-center"
-              >
-                {rea.title}{" "}
+          <h2
+            ref={title}
+            className="opacity-0 translate-y-4 text-start md:text-center font-[NewYork] text-6xl h-[30vh] md:h-[25vh] flex md:justify-center items-center"
+          >
+            {rea.title}{" "}
+            <Link href={rea.url_repo}>
+              <a target="_blank">
                 <sup>
                   <span className="material-symbols-outlined">open_in_new</span>
                 </sup>
-              </h2>
-            </a>
-          </Link>
+              </a>
+            </Link>
+          </h2>
         )}
 
         <div ref={content} className="opacity-0 scale-90">
