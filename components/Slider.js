@@ -3,11 +3,6 @@ import { useState } from "react";
 export default function Slider({ pictures }) {
   const [indexPicture, setIndexPicture] = useState(0);
 
-  const urlServ =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000/"
-      : "https://portfolio-tau-tawny.vercel.app/";
-
   return (
     <div className="relative ">
       <div className="flex top-[-1.5rem] absolute items-center z-10">
@@ -32,7 +27,7 @@ export default function Slider({ pictures }) {
               style={{
                 transform: `translateX(-${indexPicture * 100}%)`,
               }}
-              src={urlServ + item.img}
+              src={item.img}
             />
           );
         })}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import { createRef, useEffect, useState } from "react";
 import Modal from "../components/Modal";
+import data from "../public/data.json";
 
 export default function Home({ realisations }) {
   const [modal, setModal] = useState(null);
@@ -87,9 +88,11 @@ export default function Home({ realisations }) {
               </p>
             </a>
           </Link>
-          <p className="absolute left-10 bottom-10">
-            alexis.flacher38@gmail.com
-          </p>
+          <Link href="mailto:alexis.flacher38@gmail.com">
+            <a className="absolute left-10 bottom-10">
+              alexis.flacher38@gmail.com
+            </a>
+          </Link>
         </div>
       </div>
 
@@ -138,18 +141,6 @@ export default function Home({ realisations }) {
   );
 }
 
-export async function getServerSideProps() {
-  // appel du json pour rendre le contenu dynamique
-  const urlServ =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000/"
-      : "https://portfolio-tau-tawny.vercel.app/";
-  const res = await fetch(`${urlServ}/data.json`);
-  const realisations = await res.json();
-
-  return {
-    props: {
-      realisations,
-    },
-  };
+export async function getStaticProps() {
+  return { props: { realisations: data } };
 }
