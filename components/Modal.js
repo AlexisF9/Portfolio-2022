@@ -35,10 +35,6 @@ export default function Modal({ rea, open, setModal }) {
       ref={modal}
       className="relative min-h-[100vh] flex flex-col bg-white items-center"
     >
-      {/* <div
-        ref={overlay}
-        className="translate-y-full opacity-0 h-[60vh] w-full absolute bottom-0 bg-[#1b262c]"
-      ></div> */}
       <button
         onClick={() => {
           setModal(null);

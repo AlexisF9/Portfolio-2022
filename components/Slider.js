@@ -7,6 +7,7 @@ export default function Slider({ pictures }) {
 
   useEffect(() => {
     let timer = null;
+
     if (autoSlide) {
       timer = setTimeout(() => {
         if (indexPicture === 2) {

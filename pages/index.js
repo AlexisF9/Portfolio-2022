@@ -12,6 +12,9 @@ export default function Home({ realisations }) {
   const rea = createRef();
   const listeRea = createRef();
 
+  const title = createRef();
+  const content = createRef();
+
   const tl = gsap.timeline({ ease: "power1.out" });
 
   function handleClick() {
@@ -41,9 +44,11 @@ export default function Home({ realisations }) {
     tr.to(intro.current, 1, {
       opacity: 1,
     });
-    tr.to(introContent.current, 0.8, {
+    tr.to(title.current, 0.8, {
       opacity: 1,
+      transform: "scale(1)",
     });
+    gsap.to(content.current, { opacity: 1, duration: 0.8, delay: 2 });
   }, []);
 
   return (
@@ -52,56 +57,62 @@ export default function Home({ realisations }) {
         ref={intro}
         className="relative opacity-0 w-full md:w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
       >
-        <div ref={introContent} className="opacity-0">
-          <h1 className="font-[NewYork] text-7xl md:text-7xl lg:text-8xl">
+        <div ref={introContent}>
+          <h1
+            ref={title}
+            className="opacity-0 scale-150 font-[NewYork] text-7xl md:text-7xl lg:text-8xl"
+          >
             Alexis Flacher
           </h1>
-          <p
-            className="pr-4 mx-auto md:mx-0 relative group w-max mt-2 cursor-pointer uppercase hover:tracking-wider ease-in-out duration-700"
-            onClick={() => handleClick()}
-          >
-            <span className="absolute right-0 group-hover:w-full ease-in-out duration-500 w-2.5 h-0.5 top-2/4 bg-cyan-500"></span>
-            Liste de mes réalisations
-          </p>
 
-          <div className="absolute flex right-10 top-10 md:flex-row flex-col ">
-            <Link href="https://github.com/AlexisF9">
-              <a target="_blank" className="md:mr-4 md:mb-0 mb-5">
-                <img
-                  className="w-10"
-                  src="/logos/github.png"
-                  alt="logo GitHub"
-                />
+          <div ref={content} className="opacity-0">
+            <p
+              className="pr-4 mx-auto md:mx-0 relative group w-max mt-2 cursor-pointer uppercase hover:tracking-wider ease-in-out duration-700"
+              onClick={() => handleClick()}
+            >
+              <span className="absolute right-0 group-hover:w-full ease-in-out duration-500 w-2.5 h-0.5 top-2/4 bg-cyan-500"></span>
+              Liste de mes réalisations
+            </p>
+
+            <div className="absolute flex right-10 top-10 md:flex-row flex-col ">
+              <Link href="https://github.com/AlexisF9">
+                <a target="_blank" className="md:mr-4 md:mb-0 mb-5">
+                  <img
+                    className="w-10"
+                    src="/logos/github.png"
+                    alt="logo GitHub"
+                  />
+                </a>
+              </Link>
+              <Link href="https://www.linkedin.com/in/alexis-flacher-772ba7197/">
+                <a target="_blank">
+                  <img
+                    className="w-10"
+                    src="/logos/linkedin.png"
+                    alt="logo LinkedIn"
+                  />
+                </a>
+              </Link>
+            </div>
+
+            <Link href="https://www.tbwa-paris.com/fr">
+              <a>
+                <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
+                  Développeur frontend chez TBWA\Paris{" "}
+                  <img
+                    src="/logos/tbwa.jpg"
+                    className="md:ml-2 ml-0 md:mt-0 mt-2 w-8 h-8"
+                    alt="logo TBWA\Paris"
+                  />
+                </p>
               </a>
             </Link>
-            <Link href="https://www.linkedin.com/in/alexis-flacher-772ba7197/">
-              <a target="_blank">
-                <img
-                  className="w-10"
-                  src="/logos/linkedin.png"
-                  alt="logo LinkedIn"
-                />
+            <Link href="mailto:alexis.flacher38@gmail.com">
+              <a className="absolute left-10 bottom-10">
+                alexis.flacher38@gmail.com
               </a>
             </Link>
           </div>
-
-          <Link href="https://www.tbwa-paris.com/fr">
-            <a>
-              <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
-                Développeur frontend chez TBWA\Paris{" "}
-                <img
-                  src="/logos/tbwa.jpg"
-                  className="md:ml-2 ml-0 md:mt-0 mt-2 w-8 h-8"
-                  alt="logo TBWA\Paris"
-                />
-              </p>
-            </a>
-          </Link>
-          <Link href="mailto:alexis.flacher38@gmail.com">
-            <a className="absolute left-10 bottom-10">
-              alexis.flacher38@gmail.com
-            </a>
-          </Link>
         </div>
       </div>
 
