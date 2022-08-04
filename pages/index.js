@@ -46,21 +46,20 @@ export default function Home({ realisations }) {
     });
     tr.to(title.current, 0.8, {
       opacity: 1,
-      transform: "scale(1)",
     });
     gsap.to(content.current, { opacity: 1, duration: 0.8, delay: 2 });
   }, []);
 
   return (
-    <main className="flex h-[100vh]">
+    <main className="flex h-[100vh] min-w-full">
       <div
         ref={intro}
-        className="relative opacity-0 w-full md:w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
+        className="relative opacity-0 min-w-full md:min-w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
       >
         <div ref={introContent}>
           <h1
             ref={title}
-            className="opacity-0 scale-150 font-[NewYork] text-7xl md:text-7xl lg:text-8xl"
+            className="opacity-0 font-[NewYork] text-7xl md:text-7xl lg:text-8xl"
           >
             Alexis Flacher
           </h1>
