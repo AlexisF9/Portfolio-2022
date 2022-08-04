@@ -4,6 +4,11 @@ import { createRef, useEffect, useState } from "react";
 import Modal from "../components/Modal";
 import data from "../public/data.json";
 
+import github from "../public/logos/github.png";
+import linkedin from "../public/logos/linkedin.png";
+import tbwa from "../public/logos/tbwa.jpg";
+import { AppImage } from "../components/Image";
+
 export default function Home({ realisations }) {
   const [modal, setModal] = useState(null);
 
@@ -76,18 +81,14 @@ export default function Home({ realisations }) {
             <div className="absolute flex right-10 top-10 md:flex-row flex-col ">
               <Link href="https://github.com/AlexisF9">
                 <a target="_blank" className="md:mr-4 md:mb-0 mb-5">
-                  <img
-                    className="w-10"
-                    src="/logos/github.png"
-                    alt="logo GitHub"
-                  />
+                  <AppImage src={github} className="w-10" alt="logo GitHub" />
                 </a>
               </Link>
               <Link href="https://www.linkedin.com/in/alexis-flacher-772ba7197/">
                 <a target="_blank">
-                  <img
+                  <AppImage
+                    src={linkedin}
                     className="w-10"
-                    src="/logos/linkedin.png"
                     alt="logo LinkedIn"
                   />
                 </a>
@@ -98,8 +99,8 @@ export default function Home({ realisations }) {
               <a>
                 <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
                   Développeur frontend chez TBWA\Paris{" "}
-                  <img
-                    src="/logos/tbwa.jpg"
+                  <AppImage
+                    src={tbwa}
                     className="md:ml-2 ml-0 md:mt-0 mt-2 w-8 h-8"
                     alt="logo TBWA\Paris"
                   />
@@ -141,10 +142,17 @@ export default function Home({ realisations }) {
                   </p>
                 </div>
 
-                <img
+                {/* <img
                   alt={"image" + index}
                   src={item.picture[0].img}
                   className="opacity-20 scale-100 translate-y-0 md:group-hover:opacity-20 md:group-hover:scale-100 md:group-hover:translate-y-0 md:translate-y-7 ease-in-out[cubic-bezier(.42,0,0,1.15)] duration-500 h-full w-full object-cover	object-center	 md:opacity-0 md:scale-90	mx-auto	"
+                /> */}
+                <AppImage
+                  className="opacity-20 scale-100 translate-y-0 md:group-hover:opacity-20 md:group-hover:scale-100 md:group-hover:translate-y-0 md:translate-y-7 ease-in-out[cubic-bezier(.42,0,0,1.15)] duration-500 h-full w-full object-cover	object-center	 md:opacity-0 md:scale-90	mx-auto	"
+                  src={item.picture[0].img}
+                  alt={"image" + index}
+                  widthImg="1920px"
+                  heightImg="1080px"
                 />
               </div>
             );
