@@ -8,11 +8,17 @@ export default function Modal({ rea, open, setModal }) {
   const title = createRef();
   const content = createRef();
 
+  const overlay = createRef();
+
   const tl = gsap.timeline({ ease: "power1.out" });
 
   useEffect(() => {
     tl.to(modal.current, 1, {
       clipPath: "circle(142% at 100% 0)",
+    });
+    tl.to(overlay.current, 0.5, {
+      opacity: 1,
+      transform: "translateY(0)",
     });
     tl.to(title.current, 0.5, {
       transform: "translateY(0)",
@@ -29,6 +35,10 @@ export default function Modal({ rea, open, setModal }) {
       ref={modal}
       className="relative min-h-[100vh] flex flex-col bg-white items-center"
     >
+      {/* <div
+        ref={overlay}
+        className="translate-y-full opacity-0 h-[60vh] w-full absolute bottom-0 bg-[#1b262c]"
+      ></div> */}
       <button
         onClick={() => {
           setModal(null);

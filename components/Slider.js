@@ -3,20 +3,24 @@ import { useEffect, useState } from "react";
 export default function Slider({ pictures }) {
   const [indexPicture, setIndexPicture] = useState(0);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     console.log(timer);
-  //     if (indexPicture === 2) {
-  //       setIndexPicture(0);
-  //     } else {
-  //       setIndexPicture(indexPicture + 1);
-  //     }
-  //   }, 1000);
-  //   return () => {
-  //     console.log("timer", timer);
-  //     clearTimeout(timer);
-  //   };
-  // }, [indexPicture]);
+  const [autoSlide, setAutoSlide] = useState(true);
+
+  useEffect(() => {
+    let timer = null;
+    if (autoSlide) {
+      timer = setTimeout(() => {
+        if (indexPicture === 2) {
+          setIndexPicture(0);
+        } else {
+          setIndexPicture(indexPicture + 1);
+        }
+      }, 4000);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [indexPicture]);
 
   return (
     <div className="relative ">
@@ -29,6 +33,7 @@ export default function Slider({ pictures }) {
                 indexPicture === i ? "bg-[#1b262c]" : "bg-slate-300"
               }`}
               onClick={() => {
+                setAutoSlide(false);
                 setIndexPicture(i);
               }}
             ></span>
