@@ -51,10 +51,10 @@ export default function Home({ realisations }) {
   }, []);
 
   return (
-    <main className="flex h-[100vh] min-w-full">
+    <main className="flex h-[100vh] w-full">
       <div
         ref={intro}
-        className="relative opacity-0 min-w-full md:min-w-[70%] min-h-full flex flex-col bg-white justify-center items-center text-center"
+        className="relative opacity-0 w-full md:w-[70%] h-full flex flex-col bg-white justify-center items-center text-center"
       >
         <div ref={introContent}>
           <h1
@@ -117,7 +117,7 @@ export default function Home({ realisations }) {
 
       <div
         ref={rea}
-        className="w-0 md:w-[30%] min-h-full flex flex-col bg-fixed items-center justify-center"
+        className="w-0 md:w-[30%] h-full flex flex-col bg-fixed items-center justify-center"
       >
         <div
           ref={listeRea}
