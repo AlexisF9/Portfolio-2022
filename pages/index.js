@@ -48,9 +48,11 @@ export default function Home({ realisations }) {
   useEffect(() => {
     tr.to(intro.current, 1, {
       opacity: 1,
+      width: "100%",
     });
-    tr.to(title.current, 0.8, {
+    tr.to(title.current, 0.5, {
       opacity: 1,
+      transform: "translateY(0)",
     });
     gsap.to(content.current, { opacity: 1, duration: 0.8, delay: 2 });
   }, []);
@@ -59,12 +61,12 @@ export default function Home({ realisations }) {
     <main className="flex h-[100vh] w-full">
       <div
         ref={intro}
-        className="relative opacity-0 w-full md:w-[70%] h-full flex flex-col bg-white justify-center items-center text-center"
+        className="relative opacity-0 w-0 md:w-[70%] h-full flex flex-col bg-white justify-center items-center text-center"
       >
         <div ref={introContent}>
           <h1
             ref={title}
-            className="opacity-0 font-[NewYork] text-7xl md:text-7xl lg:text-8xl"
+            className="opacity-0 -translate-y-10 font-[NewYork] text-7xl md:text-7xl lg:text-8xl"
           >
             Alexis Flacher
           </h1>
