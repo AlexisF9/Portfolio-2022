@@ -48,7 +48,6 @@ export default function Home({ realisations }) {
   useEffect(() => {
     tr.to(intro.current, 1, {
       opacity: 1,
-      width: "100%",
     });
     tr.to(title.current, 0.5, {
       opacity: 1,
@@ -61,7 +60,7 @@ export default function Home({ realisations }) {
     <main className="flex h-[100vh] w-full">
       <div
         ref={intro}
-        className="relative opacity-0 w-0 md:w-[70%] h-full flex flex-col bg-white justify-center items-center text-center"
+        className="relative opacity-0 w-full md:w-[70%] h-full flex flex-col bg-white justify-center items-center text-center"
       >
         <div ref={introContent}>
           <h1
