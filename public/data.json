@@ -88,8 +88,6 @@
         "title": "Projet scraping",
         "subtitle": "Mes premiers pas en scraping",
         "picture": [ 
-            {"img": "/img/puppeteer.jpeg"},
-            {"img": "/img/puppeteer.jpeg"},
             {"img": "/img/puppeteer.jpeg"}
         ],
         "description": "Le scraping est un concept qui m'était inconnu avant mon année de Bachelor. J'ai trouvé le concept très intéressant, ce qui m'a donné l'envie d'en apprendre davantage et de m'y essayer pour la première fois avec Puppeteer.",
