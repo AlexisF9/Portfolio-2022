@@ -6,7 +6,9 @@ import data from "../public/data.json";
 
 import github from "../public/logos/github.png";
 import linkedin from "../public/logos/linkedin.png";
-import tbwa from "../public/logos/tbwa.jpg";
+//import tbwa from "../public/logos/tbwa.jpg";
+import ascanio from "../public/logos/ascanio.png";
+
 import { AppImage } from "../components/Image";
 
 export default function Home({ realisations }) {
@@ -79,7 +81,7 @@ export default function Home({ realisations }) {
               Liste de mes réalisations
             </p>
 
-            <div className="absolute flex right-10 top-10 md:flex-row flex-col ">
+            <div className="absolute flex right-10 top-10 md:flex-row flex-col">
               <Link href="https://github.com/AlexisF9">
                 <a target="_blank" className="md:mr-4 md:mb-0 mb-5">
                   <AppImage src={github} className="w-10" alt="logo GitHub" />
@@ -96,23 +98,43 @@ export default function Home({ realisations }) {
               </Link>
             </div>
 
-            <Link href="https://www.tbwa-paris.com/fr">
+            {/* <Link href="https://www.tbwa-paris.com/fr">
               <a>
                 <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
-                  Développeur frontend chez TBWA\Paris{" "}
+                  Alternance dev front chez TBWA\Paris{" "}
                   <AppImage
                     src={tbwa}
-                    className="md:ml-2 ml-0 md:mt-0 mt-2 w-8 h-8"
+                    className="md:ml-2 ml-0 md:mt-0 mt-2 w-6 h-6"
                     alt="logo TBWA\Paris"
                   />
                 </p>
               </a>
+            </Link> */}
+            <Link href="https://ascan.io/">
+              <a>
+                <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
+                  Développeur front-end chez Ascanio{" "}
+                  <AppImage
+                    src={ascanio}
+                    className="md:ml-2 ml-0 md:mt-0 mt-2 w-8 h-8"
+                    alt="logo Ascanio"
+                  />
+                </p>
+              </a>
             </Link>
+
+            <Link href="../alexis-flacher-CV.pdf">
+              <a className="absolute left-10 bottom-20">
+                Télécharger mon CV
+              </a>
+            </Link>
+
             <Link href="mailto:alexis.flacher38@gmail.com">
               <a className="absolute left-10 bottom-10">
                 alexis.flacher38@gmail.com
               </a>
             </Link>
+            
           </div>
         </div>
       </div>
