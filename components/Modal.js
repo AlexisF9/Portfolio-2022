@@ -76,6 +76,15 @@ export default function Modal({ rea, open, setModal }) {
               return (
                 <li
                   className="mr-2 border border-black rounded-md w-max px-2 py-1"
+                  style={
+                    item === "NextJS" ? 
+                    {backgroundColor: "black", color: "white"} 
+                    : item === "ReactJS" ? 
+                    {backgroundColor: "#61DBFB", borderColor: "#61DBFB"} 
+                    : item === "VueJS" ? 
+                    {backgroundColor: "#41B883", borderColor: "#41B883"} 
+                    : {backgroundColor: "transparent"}
+                  }                                           
                   key={index}
                 >
                   {item}
