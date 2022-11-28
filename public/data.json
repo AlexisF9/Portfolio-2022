@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "MyImmo",
-        "subtitle": "Application immobilière",
+        "subtitle": "Projet personnel",
         "picture": [ 
             {"img": "/img/MyImmo/myimmo.png"},
             {"img": "/img/MyImmo/myimmo2.png"},
@@ -19,7 +19,7 @@
     {
         "id": 2,
         "title": "La caisse d'épargne",
-        "subtitle": "Jeux de nöel",
+        "subtitle": "Projet d'alternance",
         "picture": [ 
             {"img": "/img/izicarte/izicarte.png"},
             {"img": "/img/izicarte/izicarte2.png"},
@@ -35,7 +35,7 @@
     {
         "id": 3,
         "title": "Projet Twitter",
-        "subtitle": "Blog style Twitter",
+        "subtitle": "Projet personnel",
         "picture": [ 
             {"img": "/img/twitter/twitter.png"},
             {"img": "/img/twitter/twitter2.png"},
@@ -53,7 +53,7 @@
     {
         "id": 4,
         "title": "Landing GMF",
-        "subtitle": "Landing simple pour GMF",
+        "subtitle": "Projet d'alternance",
         "picture": [ 
             {"img": "/img/GMF/gmf.png"},
             {"img": "/img/GMF/gmf2.png"},
@@ -69,7 +69,7 @@
     {
         "id": 5,
         "title": "What to Drink ?",
-        "subtitle": "Application de recette de cocktails",
+        "subtitle": "Projet personnel",
         "picture": [ 
             {"img": "/img/what-to-drink/what-to-drink.png"},
             {"img": "/img/what-to-drink/what-to-drink2.png"},
@@ -85,7 +85,7 @@
     {
         "id": 6,
         "title": "Projet scraping",
-        "subtitle": "Mes premiers pas en scraping",
+        "subtitle": "Projet personnel",
         "picture": [ 
             {"img": "/img/puppeteer.jpeg"}
         ],

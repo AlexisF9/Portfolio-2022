@@ -142,11 +142,11 @@ export default function Home({ realisations }) {
               </a>
             </Link>
 
-            {/* <Link href="../alexis-flacher-CV.pdf">
+            <Link href="../alexis-flacher-CV.pdf">
               <a className="absolute left-10 bottom-20">
                 Télécharger mon CV
               </a>
-            </Link> */}
+            </Link>
 
             <Link href="mailto:alexis.flacher38@gmail.com">
               <a className="absolute left-10 bottom-10">
