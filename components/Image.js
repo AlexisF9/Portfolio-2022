@@ -16,7 +16,7 @@ export const AppImage = ({
   className,
 }) => {
   return (
-    <span className={`grid w-full overflow-hidden ${className}`}>
+    <span className={`grid overflow-hidden ${className}`}>
       <Image
         src={src}
         alt={alt}
