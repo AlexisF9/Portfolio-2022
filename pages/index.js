@@ -89,10 +89,10 @@ export default function Home({ realisations }) {
                       ></path>
                     </svg>
                   </button>
-                  <div className="p-6 text-center">
+                  <div className="p-4 text-center">
                     <svg
                       aria-hidden="true"
-                      className="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200"
+                      className="mx-auto mb-2 text-gray-400 w-10 h-14 dark:text-gray-200"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -105,7 +105,7 @@ export default function Home({ realisations }) {
                         d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       ></path>
                     </svg>
-                    <h3 className="mb-3 text-lg font-normal text-gray-500 dark:text-gray-400">
+                    <h3 className="mb-2 text-lg font-normal text-gray-500 dark:text-gray-400">
                       Dernière mise à jours des réalisations : décembre 2022
                     </h3>
                   </div>
