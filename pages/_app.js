@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
         <title>Alexis Flacher - Portfolio</title>
         <meta
           name="description"
-          content="Je suis en troisième année du Bachelor Développeur web à Hetic en alternance chez TBWA\Paris."
+          content="Récemment diplomé d'un bachelor développeur web, je suis actuellement développeur front-end React/NextJS."
         />
         <link rel="icon" href="/favicon.png" />
         <link

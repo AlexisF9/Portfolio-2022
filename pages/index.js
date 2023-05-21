@@ -6,15 +6,14 @@ import data from "../public/data.json";
 
 import github from "../public/logos/github.png";
 import linkedin from "../public/logos/linkedin.png";
-//import tbwa from "../public/logos/tbwa.jpg";
-// import ascanio from "../public/logos/ascanio.png";
-import vue from "../public/logos/vue.png";
+import next from "../public/logos/next-logo.png";
 import react from "../public/logos/react.png";
 
 import { AppImage } from "../components/Image";
 
 export default function Home({ realisations }) {
   const [modal, setModal] = useState(null);
+  const [infoModal, setInfoModal] = useState(true);
 
   const intro = createRef();
   const introContent = createRef();
@@ -67,6 +66,54 @@ export default function Home({ realisations }) {
         className="relative opacity-0 w-full md:w-[70%] h-full flex flex-col bg-white justify-center items-center text-center"
       >
         <div ref={introContent}>
+          {infoModal && (
+            <div class="fixed bottom-0 right-0 md:right-[30%] z-50 p-4">
+              <div class="relative w-full max-w-md max-h-full">
+                <div class="relative bg-white rounded-lg shadow dark:bg-[#1b262c]">
+                  <button
+                    type="button"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    onClick={() => setInfoModal(false)}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div class="p-6 text-center">
+                    <svg
+                      aria-hidden="true"
+                      class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                    <h3 class="mb-3 text-lg font-normal text-gray-500 dark:text-gray-400">
+                      Dernière mise à jours des réalisations : décembre 2022
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           <h1
             ref={title}
             className="opacity-0 -translate-y-10 font-[NewYork] text-7xl md:text-7xl lg:text-8xl"
@@ -100,30 +147,6 @@ export default function Home({ realisations }) {
               </Link>
             </div>
 
-            {/* <Link href="https://www.tbwa-paris.com/fr">
-              <a>
-                <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
-                  Alternance dev front chez TBWA\Paris{" "}
-                  <AppImage
-                    src={tbwa}
-                    className="md:ml-2 ml-0 md:mt-0 mt-2 w-6 h-6"
-                    alt="logo TBWA\Paris"
-                  />
-                </p>
-              </a>
-            </Link> */}
-            {/* <Link href="https://ascan.io/">
-              <a>
-                <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
-                  Développeur front-end chez Ascanio{" "}
-                  <AppImage
-                    src={ascanio}
-                    className="md:ml-2 ml-0 md:mt-0 mt-2 w-8 h-8"
-                    alt="logo Ascanio"
-                  />
-                </p>
-              </a>
-            </Link> */}
             <Link href="https://github.com/AlexisF9">
               <a>
                 <p className="text-start w-[50%] md:w-auto flex md:flex-row flex-col md:items-center absolute top-10 left-10">
@@ -134,18 +157,16 @@ export default function Home({ realisations }) {
                     alt="logo ReactJS"
                   />
                   <AppImage
-                    src={vue}
-                    className="md:ml-2 ml-0 md:mt-0 mt-2 w-8"
-                    alt="logo VueJS"
+                    src={next}
+                    className="md:ml-2 ml-0 md:mt-0 mt-2 w-12"
+                    alt="logo NextJS"
                   />
                 </p>
               </a>
             </Link>
 
             <Link href="../alexis-flacher-CV.pdf">
-              <a className="absolute left-10 bottom-20">
-                Télécharger mon CV
-              </a>
+              <a className="absolute left-10 bottom-20">Télécharger mon CV</a>
             </Link>
 
             <Link href="mailto:alexis.flacher38@gmail.com">
@@ -153,7 +174,6 @@ export default function Home({ realisations }) {
                 alexis.flacher38@gmail.com
               </a>
             </Link>
-            
           </div>
         </div>
       </div>
