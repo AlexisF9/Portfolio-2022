@@ -204,13 +204,15 @@ export default function Home({ realisations }) {
                   </p>
                 </div>
 
-                <AppImage
-                  className="opacity-20 scale-100 translate-y-0 md:group-hover:opacity-20 md:group-hover:scale-100 md:group-hover:translate-y-0 md:translate-y-7 ease-in-out[cubic-bezier(.42,0,0,1.15)] duration-500 h-full w-full object-cover object-center	 md:opacity-0 md:scale-90	mx-auto	"
-                  src={item.picture[0].img}
-                  alt={"image" + index}
-                  widthImg="1920px"
-                  heightImg="1080px"
-                />
+                {item.picture.length > 0 && (
+                  <AppImage
+                    className="opacity-20 scale-100 translate-y-0 md:group-hover:opacity-20 md:group-hover:scale-100 md:group-hover:translate-y-0 md:translate-y-7 ease-in-out[cubic-bezier(.42,0,0,1.15)] duration-500 h-full w-full object-cover object-center	 md:opacity-0 md:scale-90	mx-auto	"
+                    src={item.picture[0].img}
+                    alt={"image" + index}
+                    widthImg="1920px"
+                    heightImg="1080px"
+                  />
+                )}
               </div>
             );
           }, [])}
