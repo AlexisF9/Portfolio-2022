@@ -1,19 +1,18 @@
 [
     {
         "id": 1,
-        "title": "MyImmo",
-        "subtitle": "Projet personnel",
+        "title": "Balenciaga Sustainability",
+        "subtitle": "Projet professionnel",
         "picture": [ 
-            {"img": "/img/MyImmo/myimmo.png"},
-            {"img": "/img/MyImmo/myimmo2.png"},
-            {"img": "/img/MyImmo/myimmo3.png"}
+            {"img": "/img/BAL/BAL-1.png"},
+            {"img": "/img/BAL/BAL-2.png"},
+            {"img": "/img/BAL/BAL-3.png"}
         ],
-        "description": "Création d'une appplication de recherche immobilière en NextJS et Strapi. Ce projet me permet d'approfondir mes connaissances dans la gestion des cookies et des sessions utilisateurs",
-        "url_repo": "https://github.com/AlexisF9/MyImmo",
+        "description": "Balenciaga Sustainability a été mon premier projet front lors de mon arrivé chez Big Boss Studio.",
+        "url_repo": "https://informationproduit.balenciaga.com/fr/product/725090TMO701000",
         "tags": [
-            "Projet perso",
-            "NextJS",
-            "Strapi"
+            "Projet professionnel",
+            "ReactJS"
         ]  
     },
     {
@@ -34,6 +33,39 @@
     },
     {
         "id": 3,
+        "title": "Landing GMF",
+        "subtitle": "Projet d'alternance",
+        "picture": [ 
+            {"img": "/img/GMF/gmf.png"},
+            {"img": "/img/GMF/gmf2.png"},
+            {"img": "/img/GMF/gmf3.png"}
+        ],
+        "description": "C'est l'une de mes premières landing chez TBWA, j'ai faits cette landing pour GMF en NextJS.",
+        "url_repo": null,
+        "tags": [
+            "Projet alternance",
+            "NextJS"
+        ]  
+    },
+    {
+        "id": 4,
+        "title": "MyImmo",
+        "subtitle": "Projet personnel",
+        "picture": [ 
+            {"img": "/img/MyImmo/myimmo.png"},
+            {"img": "/img/MyImmo/myimmo2.png"},
+            {"img": "/img/MyImmo/myimmo3.png"}
+        ],
+        "description": "Création d'une appplication de recherche immobilière en NextJS et Strapi. Ce projet me permet d'approfondir mes connaissances dans la gestion des cookies et des sessions utilisateurs",
+        "url_repo": "https://github.com/AlexisF9/MyImmo",
+        "tags": [
+            "Projet perso",
+            "NextJS",
+            "Strapi"
+        ]  
+    },
+    {
+        "id": 5,
         "title": "Projet Twitter",
         "subtitle": "Projet personnel",
         "picture": [ 
@@ -51,23 +83,7 @@
         ]  
     },
     {
-        "id": 4,
-        "title": "Landing GMF",
-        "subtitle": "Projet d'alternance",
-        "picture": [ 
-            {"img": "/img/GMF/gmf.png"},
-            {"img": "/img/GMF/gmf2.png"},
-            {"img": "/img/GMF/gmf3.png"}
-        ],
-        "description": "C'est l'une de mes premières landing chez TBWA, j'ai faits cette landing pour GMF en NextJS.",
-        "url_repo": null,
-        "tags": [
-            "Projet alternance",
-            "NextJS"
-        ]  
-    },
-    {
-        "id": 5,
+        "id": 6,
         "title": "What to Drink ?",
         "subtitle": "Projet personnel",
         "picture": [ 
@@ -83,7 +99,7 @@
         ] 
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "Projet scraping",
         "subtitle": "Projet personnel",
         "picture": [ 
