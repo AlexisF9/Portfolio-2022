@@ -8,7 +8,7 @@
             {"img": "/img/BAL/BAL-2.png"},
             {"img": "/img/BAL/BAL-3.png"}
         ],
-        "description": "Balenciaga Sustainability a été mon premier projet front lors de mon arrivé chez Big Boss Studio.",
+        "description": "Balenciaga Sustainability a été mon premier projet front lors de mon arrivé chez Big Boss Studio. La problématique de Balenciaga France était de créer une platforme pour permettre aux clients de connaitre la composition et la provenance des produits.",
         "url_repo": "https://informationproduit.balenciaga.com/fr/product/725090TMO701000",
         "tags": [
             "Projet professionnel",
@@ -24,7 +24,7 @@
             {"img": "/img/izicarte/izicarte2.png"},
             {"img": "/img/izicarte/izicarte3.png"}
         ],
-        "description": "Durant mon alternance chez TBWA/Paris j'ai eu l'occasion de réaliser un mini-jeux pour la Caisse d'Epargne qui est une chasse aux trésors dans une vitrine de nöel. J'ai réalisé cette application en NextJS.",
+        "description": "Durant mon alternance chez TBWA/Paris j'ai eu l'occasion de réaliser un mini-jeux pour la Caisse d'Epargne qui est une chasse aux trésors dans une vitrine de nöel.",
         "url_repo": null,
         "tags": [
             "Projet alternance",
@@ -40,7 +40,7 @@
             {"img": "/img/GMF/gmf2.png"},
             {"img": "/img/GMF/gmf3.png"}
         ],
-        "description": "C'est l'une de mes premières landing chez TBWA, j'ai faits cette landing pour GMF en NextJS.",
+        "description": "Lors de mon alternance chez TBWA/Paris j'ai eu l'occasion de créer cette landing pour GMF.",
         "url_repo": null,
         "tags": [
             "Projet alternance",
