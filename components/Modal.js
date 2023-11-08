@@ -83,6 +83,18 @@ export default function Modal({ rea, open, setModal }) {
                       ? { backgroundColor: "#61DBFB", borderColor: "#61DBFB" }
                       : item === "VueJS"
                       ? { backgroundColor: "#41B883", borderColor: "#41B883" }
+                      : item === "Styled components"
+                      ? {
+                          backgroundColor: "rgb(191, 79, 116)",
+                          borderColor: "rgb(191, 79, 116)",
+                          color: "white",
+                        }
+                      : item === "Strapi"
+                      ? {
+                          backgroundColor: "#121180",
+                          borderColor: "#121180",
+                          color: "white",
+                        }
                       : { backgroundColor: "transparent" }
                   }
                   key={index}
